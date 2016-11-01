@@ -2,11 +2,13 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Web.SessionState;
 
 using NLog;
 
 namespace FullWeb.Controllers
 {
+    [SessionState(SessionStateBehavior.Disabled)]
     public class HomeController : Controller
     {
         private const int _waitTimeout = 30000;
